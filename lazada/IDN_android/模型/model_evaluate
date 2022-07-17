@@ -1,0 +1,730 @@
+logs_start
+args Namespace(days_delay='2', geo='IDN', lastdaygap='3', maxDepth='15', maxIter='25', minInfoGain='0', minInstancesPerNode='50', model_day='20220701', neg_pos_ratio='50', oss_dirname='lazada', pkg_name='com.lazada.android', pkg_subcategory='Shopping', platform='android', predict_day='20220704', predict_num='0', test_days='1', train_days='5', updatemodel='1')
+predict_dirPath oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/predict/20220704_delay_2_lastdaygap_3
+predict_predict_dirPath oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/predict/20220704_delay_2_lastdaygap_3_predict
+step 1：创建训练集、测试集路径
+train_pos_neg_sample_list
+['oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220701_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220630_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220629_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220628_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220627_delay_2_lastdaygap_3']
+test_pos_neg_sample_list
+['oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220702_delay_2_lastdaygap_3']
+step 2: 构建模型
+******构建 no need data 模型******
+step 3: 创建训练集
+************创建训练集 no need data****************
+train_sample_i:0,pos_count:17371,neg_count:89887184
+train_sample_i:1,pos_count:17255,neg_count:89372414
+train_sample_i:2,pos_count:18452,neg_count:88708589
+train_sample_i:3,pos_count:17125,neg_count:87844564
+train_sample_i:4,pos_count:15357,neg_count:86976002
+******构建 has need data 模型******
+step 3: 创建训练集
+************创建训练集 has need data****************
+train_sample_i:0,pos_count:121716,neg_count:89887184
+train_sample_i:1,pos_count:125471,neg_count:89372414
+train_sample_i:2,pos_count:130407,neg_count:88708589
+train_sample_i:3,pos_count:128287,neg_count:87844564
+train_sample_i:4,pos_count:132269,neg_count:86976002
+model_save_path oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/model/20220701_delay_2_lastdaygap_3
+模型评价
+step 1：创建训练集、测试集路径
+train_pos_neg_sample_list
+['oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220701_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220630_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220629_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220628_delay_2_lastdaygap_3', 'oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220627_delay_2_lastdaygap_3']
+test_pos_neg_sample_list
+['oss://sdkemr-yeahmobi/user/chensheng/pkg/lazada/IDN_android/sample/20220702_delay_2_lastdaygap_3']
+******对 no need data 模型进行评价
+step 2:模型评价
+step 2-1：训练集评价
+************创建训练集 no need data****************
+train_sample_i:0,pos_count:17371,neg_count:89887184
+train_sample_i:1,pos_count:17255,neg_count:89372414
+train_sample_i:2,pos_count:18452,neg_count:88708589
+train_sample_i:3,pos_count:17125,neg_count:87844564
+train_sample_i:4,pos_count:15357,neg_count:86976002
+********************
+train rawPrediction_1_desc
+train rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|              85560|
+|   mean|-0.9285396795444578|
+| stddev| 0.4007484339786347|
+|    min|-1.6231668267688963|
+|    max|0.08907251835490784|
++-------+-------------------+
+
+train rawPrediction_1_desc:label=0
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|            4279784|
+|   mean|-1.5297160509344465|
+| stddev|0.20115833185867624|
+|    min|-1.8451315721120212|
+|    max|0.08907251835490784|
++-------+-------------------+
+
+train AUC: 0.930584
+step 2-2：测试集评价
+************创建测试集 no need data:%d****************
+********************
+test rawPrediction_1_desc
+test rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|              16170|
+|   mean|-0.9638659804733659|
+| stddev| 0.4390443693090937|
+|    min| -1.679502430841826|
+|    max|0.08907251835490784|
++-------+-------------------+
+
+test rawPrediction_1_desc:label=0
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|           89994947|
+|   mean|-1.5289436154632787|
+| stddev|0.20231696474859276|
+|    min|-1.8451315721120212|
+|    max|0.08907251835490784|
++-------+-------------------+
+
+test AUC: 0.897549
+统计test_predictions_label_bin中各个bin的cr
++---------+---------+---------------+--------+---------+---------+---------+
+|label_bin|label_cnt|bin_label_1_cnt|bin_cr  |avg_score|max_score|min_score|
++---------+---------+---------------+--------+---------+---------+---------+
+|1        |4500555  |9354           |0.002078|-0.798159|0.089073 |-1.071059|
+|2        |4500556  |2502           |5.56E-4 |-1.206758|-1.071059|-1.310375|
+|3        |4500556  |1228           |2.73E-4 |-1.381549|-1.310375|-1.443273|
+|4        |4500556  |703            |1.56E-4 |-1.485563|-1.443273|-1.520675|
+|5        |4500556  |491            |1.09E-4 |-1.544821|-1.520675|-1.564033|
+|6        |4500556  |392            |8.7E-5  |-1.576188|-1.564033|-1.585384|
+|7        |4500555  |227            |5.0E-5  |-1.590687|-1.585384|-1.595127|
+|8        |4500556  |203            |4.5E-5  |-1.599072|-1.595127|-1.603075|
+|9        |4500556  |160            |3.6E-5  |-1.605897|-1.603075|-1.608275|
+|10       |4500556  |138            |3.1E-5  |-1.609771|-1.608275|-1.611078|
+|11       |4500556  |127            |2.8E-5  |-1.612121|-1.611078|-1.613182|
+|12       |4500556  |111            |2.5E-5  |-1.613997|-1.613182|-1.614651|
+|13       |4500556  |81             |1.8E-5  |-1.61512 |-1.614651|-1.615666|
+|14       |4500555  |85             |1.9E-5  |-1.616105|-1.615666|-1.616431|
+|15       |4500556  |73             |1.6E-5  |-1.616646|-1.616431|-1.61706 |
+|16       |4500556  |82             |1.8E-5  |-1.617906|-1.61706 |-1.618941|
+|17       |4500556  |60             |1.3E-5  |-1.619793|-1.618941|-1.620411|
+|18       |4500556  |42             |9.0E-6  |-1.62076 |-1.620411|-1.621085|
+|19       |4500556  |44             |1.0E-5  |-1.621362|-1.621085|-1.621707|
+|20       |4500556  |67             |1.5E-5  |-1.624567|-1.621707|-1.845132|
++---------+---------+---------------+--------+---------+---------+---------+
+
+********************
+test_1 rawPrediction_1_desc
+test_1 rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|               9353|
+|   mean|-0.6507849910205628|
+| stddev|0.27822808445640823|
+|    min|-1.0708620906172615|
+|    max|0.08907251835490784|
++-------+-------------------+
+
+test_1 rawPrediction_1_desc:label=0
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|            4491202|
+|   mean|-0.7984655086615896|
+| stddev|0.22142867709823746|
+|    min|-1.0710592205655842|
+|    max|0.08907251835490784|
++-------+-------------------+
+
+test_1 AUC: 0.661155
+********************
+test_2 rawPrediction_1_desc
+test_2 rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|               2502|
+|   mean| -1.189624736998904|
+| stddev|0.06948794938560982|
+|    min|-1.3103747306756426|
+|    max|-1.0710592205655842|
++-------+-------------------+
+
+test_2 rawPrediction_1_desc:label=0
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|            4498054|
+|   mean|-1.2067672110144747|
+| stddev|0.06838177071578364|
+|    min|-1.3103747306756426|
+|    max|-1.0710592205655842|
++-------+-------------------+
+
+test_2 AUC: 0.571134
+********************
+test_3 rawPrediction_1_desc
+test_3 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                1229|
+|   mean| -1.3759421409425736|
+| stddev|0.038625523492429675|
+|    min| -1.4432079624714582|
+|    max| -1.3103747306756426|
++-------+--------------------+
+
+test_3 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4499327|
+|   mean| -1.3815503573572132|
+| stddev|0.038633869045596854|
+|    min| -1.4432730072487348|
+|    max| -1.3103747306756426|
++-------+--------------------+
+
+test_3 AUC: 0.542633
+********************
+test_4 rawPrediction_1_desc
+test_4 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 703|
+|   mean| -1.4829722178946823|
+| stddev|0.023134114879679805|
+|    min| -1.5200307998866804|
+|    max| -1.4434708189992775|
++-------+--------------------+
+
+test_4 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4499853|
+|   mean| -1.4855630707535312|
+| stddev|0.022881403209769145|
+|    min| -1.5206753868844913|
+|    max| -1.4432730072487348|
++-------+--------------------+
+
+test_4 AUC: 0.532224
+********************
+test_5 rawPrediction_1_desc
+test_5 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 491|
+|   mean| -1.5441684921666947|
+| stddev|0.011866147457898664|
+|    min| -1.5639822934391856|
+|    max| -1.5207758147798083|
++-------+--------------------+
+
+test_5 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500065|
+|   mean| -1.5448210824080986|
+| stddev|0.012210193740089649|
+|    min|  -1.564033093745008|
+|    max|  -1.520675404631181|
++-------+--------------------+
+
+test_5 AUC: 0.517689
+********************
+test_6 rawPrediction_1_desc
+test_6 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 394|
+|   mean|  -1.575690120537237|
+| stddev|0.006361174343920151|
+|    min| -1.5853839323926289|
+|    max| -1.5641369314261957|
++-------+--------------------+
+
+test_6 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500162|
+|   mean| -1.5761880260328385|
+| stddev|0.006043269784131586|
+|    min| -1.5853839323926289|
+|    max| -1.5640330981309145|
++-------+--------------------+
+
+test_6 AUC: 0.520641
+********************
+test_7 rawPrediction_1_desc
+test_7 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 225|
+|   mean| -1.5901795989150898|
+| stddev|0.002661148823799348|
+|    min| -1.5951128095733398|
+|    max| -1.5854598680447252|
++-------+--------------------+
+
+test_7 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500330|
+|   mean| -1.5906873540580213|
+| stddev|0.002881570943500445|
+|    min| -1.5951274518206888|
+|    max| -1.5853839323926289|
++-------+--------------------+
+
+test_7 AUC: 0.555109
+********************
+test_8 rawPrediction_1_desc
+test_8 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 203|
+|   mean|  -1.598916901180767|
+| stddev|0.002285443335634...|
+|    min| -1.6030593570742366|
+|    max| -1.5951401130296656|
++-------+--------------------+
+
+test_8 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500353|
+|   mean| -1.5990724731951136|
+| stddev|0.002308142474926716|
+|    min| -1.6030747982668367|
+|    max| -1.5951274523445753|
++-------+--------------------+
+
+test_8 AUC: 0.519111
+********************
+test_9 rawPrediction_1_desc
+test_9 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 160|
+|   mean| -1.6056770510671488|
+| stddev|0.001547507380507429|
+|    min| -1.6082624000981725|
+|    max| -1.6030877334527154|
++-------+--------------------+
+
+test_9 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500396|
+|   mean|  -1.605897240725313|
+| stddev|0.001496307912707...|
+|    min| -1.6082749587897085|
+|    max| -1.6030747982668367|
++-------+--------------------+
+
+test_9 AUC: 0.541381
+********************
+test_10 rawPrediction_1_desc
+test_10 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 138|
+|   mean| -1.6097713788288603|
+| stddev|8.277205077278805E-4|
+|    min| -1.6110715223069974|
+|    max| -1.6082867843769202|
++-------+--------------------+
+
+test_10 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500418|
+|   mean| -1.6097707656224023|
+| stddev|7.822273424733219E-4|
+|    min|  -1.611078479427311|
+|    max| -1.6082749587897085|
++-------+--------------------+
+
+test_10 AUC: 0.498572
+********************
+test_11 rawPrediction_1_desc
+test_11 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 127|
+|   mean| -1.6121352131667377|
+| stddev|6.137611157632603E-4|
+|    min| -1.6131720091121464|
+|    max| -1.6110793345400798|
++-------+--------------------+
+
+test_11 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500429|
+|   mean| -1.6121208621512089|
+| stddev|6.151122043775365E-4|
+|    min| -1.6131819130668599|
+|    max| -1.6110784806629175|
++-------+--------------------+
+
+test_11 AUC: 0.493863
+********************
+test_12 rawPrediction_1_desc
+test_12 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                 111|
+|   mean| -1.6140111087702202|
+| stddev|4.000020769629848...|
+|    min| -1.6146357619893503|
+|    max| -1.6132071192042592|
++-------+--------------------+
+
+test_12 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500445|
+|   mean|  -1.613997439003119|
+| stddev|4.157990520706281E-4|
+|    min| -1.6146507634245073|
+|    max| -1.6131819130668599|
++-------+--------------------+
+
+test_12 AUC: 0.492457
+********************
+test_13 rawPrediction_1_desc
+test_13 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                  81|
+|   mean|  -1.615097296923317|
+| stddev|2.758458145583921...|
+|    min|  -1.615666206139503|
+|    max| -1.6146585882935478|
++-------+--------------------+
+
+test_13 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500475|
+|   mean|   -1.61512034153699|
+| stddev|2.739951090858570...|
+|    min|  -1.615666206139503|
+|    max| -1.6146507634245073|
++-------+--------------------+
+
+test_13 AUC: 0.526862
+********************
+test_14 rawPrediction_1_desc
+test_14 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                  80|
+|   mean| -1.6160811165361904|
+| stddev|1.869752355390105...|
+|    min| -1.6164306447251646|
+|    max| -1.6156668729004704|
++-------+--------------------+
+
+test_14 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500475|
+|   mean| -1.6161051145473746|
+| stddev|1.976754382752186...|
+|    min| -1.6164306447251646|
+|    max|  -1.615666206139503|
++-------+--------------------+
+
+test_14 AUC: 0.536339
+********************
+test_15 rawPrediction_1_desc
+test_15 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                  78|
+|   mean| -1.6166278672354086|
+| stddev|1.632211815100253...|
+|    min| -1.6170579159721528|
+|    max| -1.6164306447251646|
++-------+--------------------+
+
+test_15 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500478|
+|   mean| -1.6166461133318566|
+| stddev|1.736854542013070...|
+|    min| -1.6170596361735983|
+|    max| -1.6164306447251646|
++-------+--------------------+
+
+test_15 AUC: 0.528941
+********************
+test_16 rawPrediction_1_desc
+test_16 rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|                 82|
+|   mean|-1.6179150124537853|
+| stddev|6.19989598459431E-4|
+|    min|-1.6189272141983273|
+|    max|-1.6170674406816785|
++-------+-------------------+
+
+test_16 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500474|
+|   mean|  -1.617905685135898|
+| stddev|5.673357130163802E-4|
+|    min|  -1.618941380906542|
+|    max| -1.6170596361735983|
++-------+--------------------+
+
+test_16 AUC: 0.499708
+********************
+test_17 rawPrediction_1_desc
+test_17 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                  60|
+|   mean| -1.6197408373716156|
+| stddev|4.865196700302595...|
+|    min| -1.6203983273353055|
+|    max| -1.6189413935676111|
++-------+--------------------+
+
+test_17 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500496|
+|   mean| -1.6197929800902555|
+| stddev|4.242013416869264...|
+|    min|  -1.620410806442238|
+|    max| -1.6189413832456927|
++-------+--------------------+
+
+test_17 AUC: 0.525401
+********************
+test_18 rawPrediction_1_desc
+test_18 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                  40|
+|   mean| -1.6207779732975998|
+| stddev|1.908743129055860...|
+|    min| -1.6210854036080569|
+|    max| -1.6204418098783064|
++-------+--------------------+
+
+test_18 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500516|
+|   mean|  -1.620760191478334|
+| stddev|1.852220547304556...|
+|    min| -1.6210854036080569|
+|    max|  -1.620410806442238|
++-------+--------------------+
+
+test_18 AUC: 0.471503
+********************
+test_19 rawPrediction_1_desc
+test_19 rawPrediction_1_desc:label=1
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|                  46|
+|   mean| -1.6213799037153365|
+| stddev|2.145500984234035...|
+|    min| -1.6217067064045259|
+|    max| -1.6210854036080569|
++-------+--------------------+
+
+test_19 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500510|
+|   mean| -1.6213619731641022|
+| stddev|2.053851505663805...|
+|    min| -1.6217067064045259|
+|    max| -1.6210854036080569|
++-------+--------------------+
+
+test_19 AUC: 0.476500
+********************
+test_20 rawPrediction_1_desc
+test_20 rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|                 67|
+|   mean|-1.6285171589402245|
+| stddev|0.00952290890376417|
+|    min| -1.679502430841826|
+|    max|-1.6217642511135133|
++-------+-------------------+
+
+test_20 rawPrediction_1_desc:label=0
++-------+--------------------+
+|summary|     rawPrediction_1|
++-------+--------------------+
+|  count|             4500489|
+|   mean|  -1.624566599234842|
+| stddev|0.005223342520154473|
+|    min| -1.8451315721120212|
+|    max| -1.6217067064045259|
++-------+--------------------+
+
+test_20 AUC: 0.343810
+******对 has need data 模型进行评价
+step 2:模型评价
+step 2-1：训练集评价
+************创建训练集 has need data****************
+train_sample_i:0,pos_count:121716,neg_count:89887184
+train_sample_i:1,pos_count:125471,neg_count:89372414
+train_sample_i:2,pos_count:130407,neg_count:88708589
+train_sample_i:3,pos_count:128287,neg_count:87844564
+train_sample_i:4,pos_count:132269,neg_count:86976002
+********************
+train rawPrediction_1_desc
+train rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|             638150|
+|   mean|-0.9193370212296149|
+| stddev| 0.6441122740492079|
+|    min|-1.7837619809408365|
+|    max| 0.5075238392536545|
++-------+-------------------+
+
+train rawPrediction_1_desc:label=0
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|           31912678|
+|   mean|-1.5317218196206874|
+| stddev|0.16541255314875963|
+|    min|-2.2263228447984633|
+|    max| 0.5075238392536545|
++-------+-------------------+
+
+train AUC: 0.856420
+step 2-2：测试集评价
+************创建测试集 has need data:%d****************
+********************
+test rawPrediction_1_desc
+test rawPrediction_1_desc:label=1
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|             129640|
+|   mean|-0.8679584023090202|
+| stddev|  0.653330166755874|
+|    min| -1.859570261276149|
+|    max| 0.5075238392536545|
++-------+-------------------+
+
+test rawPrediction_1_desc:label=0
++-------+-------------------+
+|summary|    rawPrediction_1|
++-------+-------------------+
+|  count|           89994947|
+|   mean|-1.5325255122992953|
+| stddev|0.16159899005928677|
+|    min|-2.2738982064672073|
+|    max| 0.5075238392536545|
++-------+-------------------+
+
+test AUC: 0.854539
+Traceback (most recent call last):
+  File "/usr/lib/spark-current/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/usr/lib/spark-current/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o2410.createTempView.
+: org.apache.spark.sql.catalyst.analysis.TempTableAlreadyExistsException: Temporary view 'test_predictions_table' already exists;
+	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createTempView(SessionCatalog.scala:541)
+	at org.apache.spark.sql.execution.command.CreateViewCommand.run(views.scala:146)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:79)
+	at org.apache.spark.sql.Dataset$$anonfun$6.apply(Dataset.scala:196)
+	at org.apache.spark.sql.Dataset$$anonfun$6.apply(Dataset.scala:196)
+	at org.apache.spark.sql.Dataset$$anonfun$52$$anonfun$apply$21.apply(Dataset.scala:3447)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewTransactionId(SQLExecution.scala:99)
+	at org.apache.spark.sql.Dataset$$anonfun$52.apply(Dataset.scala:3446)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:82)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:147)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:77)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3444)
+	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:196)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:80)
+	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$withPlan(Dataset.scala:3493)
+	at org.apache.spark.sql.Dataset.createTempView(Dataset.scala:3161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pyspark_gbdt.py", line 431, in <module>
+    load_model_evaluate()
+  File "pyspark_gbdt.py", line 334, in load_model_evaluate
+    test_predictions_label_bin = create_test_predictions_label_bin(test_predictions)
+  File "pyspark_gbdt.py", line 166, in create_test_predictions_label_bin
+    test_predictions.createTempView("test_predictions_table")
+  File "/usr/lib/spark-current/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 163, in createTempView
+  File "/usr/lib/spark-current/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/usr/lib/spark-current/python/lib/pyspark.zip/pyspark/sql/utils.py", line 71, in deco
+pyspark.sql.utils.AnalysisException: "Temporary view 'test_predictions_table' already exists;"

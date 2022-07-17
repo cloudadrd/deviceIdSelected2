@@ -1,0 +1,101 @@
+1.线上评测superset数据
+(1)real_conversion
+(2)real_buzz
+(3)fenxi_device
+2.刘庆达样本抽取数据-阿里云oss
+(1)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_device_tag/day=" + yesterday +"/platform=android/geo=IND
+用户安装列表数据，sql中的别名：source_tag
+(2)oss://sdkemr-yeahmobi/sdk_device/fuyu/*_IN
+规则标签数据，sql中的别名：fuyu_in
+(3)oss://sdkemr-yeahmobi/sdk_device/pre_data.csv
+针对用户进行安装包投放的数据，sql中的别名：sdk_device
+(4)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_app_info/
+app相关信息数据,sql中的别名：app_info
+3.刘庆达规则标签数据
+(1)oss://sdkemr-yeahmobi/sdk_device/fuyu/" + yesterday
+
+(2)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_device_tag/day=" +yesterday
+脚本中的别名：source_tag
+用户app安装列表
+<1>过滤：
+    lastactiveday>=7天前
+    (geo in ('KOR','GBR','TWN','JPN','IND','DEU','BRA','MYS','VNM','PHL','SGP','THA','USA')or ( geo = 'OTHER' and country in ('ARE','TUR','BGD','PER','FRA','PAK','ESP','UKR','AZE','PER','MEX','MYS','VNM','PHL','SGP','THA','CIV','CMR','BFA','SEN','NGA','IRL')))
+    platform in ('android','ios')
+
+    union
+
+    lastactiveday>=14天前
+    geo in ('RUS','IDN','MEX','BRA')
+    platform in ('android','ios')
+
+bundles_size:安装的app个数
+    ==1 >>> label:a
+    >=2 and <=4 >>> label:b
+    >=5 and <=10 >>> label:c
+    else >>> label:d
+
+
+返回：
+    device,bundles_size,ip,ua,osv,lang,country,platform
+<2> 过滤：
+    lastactiveday>=2月前 and <14
+    (platform in ('android') and geo in ('GBR'))or (platform in ('android','ios') and geo = 'KOR')
+ geo == GBR >>> ("GB", "android", "adx", device, "57351627", "aw", "null", "null", "null", "null")
+ geo == KOR and platform=="android" >>>  ("KR", "android", "adx",device, "57351627", "aw", "null", "null", "null", "null")
+ else >>> ("KR", "ios", "adx", device "10981429", "ew4",ip, ua,osversion, lang)
+
+
+
+
+(3)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_device_source_aff
+(4)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_device_source_adx/
+(5)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_device_source_direct/
+
+(3)(4)(5)不同广告投放
+adx:一种汇聚了各种媒体流量的大规模交易平台，是DSP实现受众精准购买的交易场所。(DSP 关注用户增长)
+aff:网盟
+直投：
+
+| select  country_platform,uid,label,sum(day) day from
+         |(select  concat(geo, '_', platform) as country_platform,ifa as uid ,${source} as label , count(day) as day
+         |       from ${table_name}
+         |       where day <= '${yesterday}' and day >= '${three_day}' and geo in ('KR','HK','JP','TW','CN','US','IN','BR','GB','TH','PH','DE','VN','ID','CA','MX','EC','SA','AE','CO','MY','SG','AU','MO','FR','ES','RU','ZA','PT','IT','PK','FR','AZ','PE','NG','IE') and platform in ('ios','android')
+         | group by geo,platform,ifa,${source}
+         | union
+         | select concat(geo, '_', platform) as country_platform,ifa as uid ,${source} as label , count(day) as day
+         |       from ${table_name}
+         |       where day <= '${three_day}' and day >= '${seven_day}' and geo in ('HK','JP','TW','BR','GB','TH','PH','DE','VN','ID','CA','MX','EC','SA','AE','CO','MY','SG','AU','MO','FR','ES','IN','US','RU','ZA','PT','IT','PK','FR','NG','IE') and platform in ('ios','android')
+         |
+         |group by geo,platform,ifa,${source}
+         |union
+         | select concat(geo, '_', platform) as country_platform,ifa as uid ,${source} as label , count(day) as day
+         |       from ${table_name}
+         |       where day <= '${seven_day}' and day >= '${two_week}' and geo in ('RU','ID','MX','BR')
+         |group by geo,platform,ifa,${source}
+         |)
+         |group by country_platform,uid,label
+
+(6)oss://dmp-yeahmobi-com/hive_dataware/dmp/t_dmp_ios_ipua/day=" + yesterday
+脚本中的别名：ipua_source
+字段：
+    ip,ua,osversion,lang,country,lastactiveday
+??? 近14天活跃，排除"GBR、FRA、TUR、IND"国家的数据；近两个月活跃，只筛选"GBR、FRA、TUR、IND"国家的数据
+dif_day:最近一次活跃距今的天数：
+    ==0 >>> label:ew0 slot:28206264
+    ==1 >>> label:ew1 slot:19194551
+    ==2 >>> label:ew2 slot:26241235
+    >=3 and <=6 >>> label:ew3 slot:83810538
+    >=7 >>> label:ew4 slot:10981429
+
+    <=2 >>> label:ew slot:66422694
+返回：
+    ip,ua,osv,lang,country,label,slot
+
+
+
+
+(7)oss://sdkemr-yeahmobi/sdk_device/us_region/"
+用户信息：country,platform,source,device,slot,label_reflect,null,null,null,null
+(8)oss://sdkemr-yeahmobi/kr_slot_reflect
+
+(9)oss://sdkemr-yeahmobi/filter_source.properties

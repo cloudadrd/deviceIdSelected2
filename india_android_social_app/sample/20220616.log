@@ -1,0 +1,1122 @@
+22/06/23 22:08:17 INFO [Thread-6] SparkContext: Running Spark version 2.4.5
+22/06/23 22:08:17 INFO [Thread-6] SparkContext: Submitted application: sample
+22/06/23 22:08:17 INFO [Thread-6] SecurityManager: Changing view acls to: root,*
+22/06/23 22:08:17 INFO [Thread-6] SecurityManager: Changing modify acls to: root
+22/06/23 22:08:17 INFO [Thread-6] SecurityManager: Changing view acls groups to: 
+22/06/23 22:08:17 INFO [Thread-6] SecurityManager: Changing modify acls groups to: 
+22/06/23 22:08:17 INFO [Thread-6] SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, *); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+22/06/23 22:08:17 INFO [Thread-6] Utils: Successfully started service 'sparkDriver' on port 42435.
+22/06/23 22:08:17 INFO [Thread-6] SparkEnv: Registering MapOutputTracker
+22/06/23 22:08:17 INFO [Thread-6] SparkEnv: Registering BlockManagerMaster
+22/06/23 22:08:17 INFO [Thread-6] BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/06/23 22:08:17 INFO [Thread-6] BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/06/23 22:08:17 INFO [Thread-6] DiskBlockManager: Created local directory at /tmp/blockmgr-b7f29034-4171-49ae-ac54-b96655cc9954
+22/06/23 22:08:17 INFO [Thread-6] MemoryStore: MemoryStore started with capacity 5.2 GB
+22/06/23 22:08:17 INFO [Thread-6] SparkEnv: Registering OutputCommitCoordinator
+22/06/23 22:08:18 INFO [Thread-6] Utils: Successfully started service 'SparkUI' on port 4040.
+22/06/23 22:08:18 INFO [Thread-6] SparkUI: Bound SparkUI to 0.0.0.0, and started at http://10.102.208.236:4040
+22/06/23 22:08:19 INFO [Thread-6] RMProxy: Connecting to ResourceManager at emr-header-1.cluster-113212/10.102.208.236:8032
+22/06/23 22:08:19 INFO [Thread-6] Client: Requesting a new application from cluster with 12 NodeManagers
+22/06/23 22:08:19 INFO [Thread-6] Client: Verifying our application has not requested more than the maximum memory capability of the cluster (57856 MB per container)
+22/06/23 22:08:19 INFO [Thread-6] Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+22/06/23 22:08:19 INFO [Thread-6] Client: Setting up container launch context for our AM
+22/06/23 22:08:19 INFO [Thread-6] Client: Setting up the launch environment for our AM container
+22/06/23 22:08:19 INFO [Thread-6] Client: Preparing resources for our AM container
+22/06/23 22:08:19 WARN [Thread-6] Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+22/06/23 22:08:24 INFO [Thread-6] Client: Uploading resource file:/tmp/spark-c1d53110-6f54-446a-8930-1a9180e45d32/__spark_libs__2624988494436501144.zip -> hdfs://emr-header-1.cluster-113212:9000/user/root/.sparkStaging/application_1655879175221_0063/__spark_libs__2624988494436501144.zip
+22/06/23 22:08:25 INFO [Thread-6] Client: Uploading resource file:/etc/ecm/spark-conf/hive-site.xml -> hdfs://emr-header-1.cluster-113212:9000/user/root/.sparkStaging/application_1655879175221_0063/hive-site.xml
+22/06/23 22:08:25 INFO [Thread-6] Client: Uploading resource file:/usr/lib/spark-current/python/lib/pyspark.zip -> hdfs://emr-header-1.cluster-113212:9000/user/root/.sparkStaging/application_1655879175221_0063/pyspark.zip
+22/06/23 22:08:25 INFO [Thread-6] Client: Uploading resource file:/usr/lib/spark-current/python/lib/py4j-0.10.7-src.zip -> hdfs://emr-header-1.cluster-113212:9000/user/root/.sparkStaging/application_1655879175221_0063/py4j-0.10.7-src.zip
+22/06/23 22:08:26 INFO [Thread-6] Client: Uploading resource file:/tmp/spark-c1d53110-6f54-446a-8930-1a9180e45d32/__spark_conf__7154683646685234527.zip -> hdfs://emr-header-1.cluster-113212:9000/user/root/.sparkStaging/application_1655879175221_0063/__spark_conf__.zip
+22/06/23 22:08:26 INFO [Thread-6] Client: EMR SmartData using Java binary at JAVA_HOME.
+22/06/23 22:08:26 INFO [Thread-6] SecurityManager: Changing view acls to: root,*
+22/06/23 22:08:26 INFO [Thread-6] SecurityManager: Changing modify acls to: root
+22/06/23 22:08:26 INFO [Thread-6] SecurityManager: Changing view acls groups to: 
+22/06/23 22:08:26 INFO [Thread-6] SecurityManager: Changing modify acls groups to: 
+22/06/23 22:08:26 INFO [Thread-6] SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root, *); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+22/06/23 22:08:28 INFO [Thread-6] Client: Submitting application application_1655879175221_0063 to ResourceManager
+22/06/23 22:08:28 INFO [Thread-6] YarnClientImpl: Submitted application application_1655879175221_0063
+22/06/23 22:08:28 INFO [Thread-6] SchedulerExtensionServices: Starting Yarn extension services with app application_1655879175221_0063 and attemptId None
+22/06/23 22:08:29 INFO [Thread-6] Client: Application report for application_1655879175221_0063 (state: ACCEPTED)
+22/06/23 22:08:29 INFO [Thread-6] Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1655993308310
+	 final status: UNDEFINED
+	 tracking URL: http://emr-header-1.cluster-113212:20888/proxy/application_1655879175221_0063/
+	 user: root
+22/06/23 22:08:30 INFO [Thread-6] Client: Application report for application_1655879175221_0063 (state: ACCEPTED)
+22/06/23 22:08:31 INFO [Thread-6] Client: Application report for application_1655879175221_0063 (state: ACCEPTED)
+22/06/23 22:08:32 INFO [Thread-6] Client: Application report for application_1655879175221_0063 (state: ACCEPTED)
+22/06/23 22:08:33 INFO [Thread-6] Client: Application report for application_1655879175221_0063 (state: ACCEPTED)
+22/06/23 22:08:34 INFO [Thread-6] Client: Application report for application_1655879175221_0063 (state: RUNNING)
+22/06/23 22:08:34 INFO [Thread-6] Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 10.102.208.242
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1655993308310
+	 final status: UNDEFINED
+	 tracking URL: http://emr-header-1.cluster-113212:20888/proxy/application_1655879175221_0063/
+	 user: root
+22/06/23 22:08:34 INFO [Thread-6] YarnClientSchedulerBackend: Application application_1655879175221_0063 has started running.
+22/06/23 22:08:34 INFO [Thread-6] Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42500.
+22/06/23 22:08:34 INFO [Thread-6] NettyBlockTransferService: Server created on 10.102.208.236:42500
+22/06/23 22:08:34 INFO [Thread-6] BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/06/23 22:08:34 INFO [Thread-6] BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.102.208.236, 42500, None)
+22/06/23 22:08:34 INFO [dispatcher-event-loop-2] BlockManagerMasterEndpoint: Registering block manager 10.102.208.236:42500 with 5.2 GB RAM, BlockManagerId(driver, 10.102.208.236, 42500, None)
+22/06/23 22:08:34 INFO [Thread-6] BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.102.208.236, 42500, None)
+22/06/23 22:08:34 INFO [Thread-6] BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.102.208.236, 42500, None)
+22/06/23 22:08:34 INFO [dispatcher-event-loop-0] YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> emr-header-1.cluster-113212, PROXY_URI_BASES -> http://emr-header-1.cluster-113212:20888/proxy/application_1655879175221_0063), /proxy/application_1655879175221_0063
+22/06/23 22:08:35 INFO [dispatcher-event-loop-2] YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+22/06/23 22:08:35 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+22/06/23 22:08:35 INFO [Thread-6] EventLoggingListener: Logging events to hdfs:/spark-history/application_1655879175221_0063
+22/06/23 22:08:39 INFO [dispatcher-event-loop-1] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.247:48070) with ID 1
+22/06/23 22:08:39 INFO [dispatcher-event-loop-2] BlockManagerMasterEndpoint: Registering block manager emr-worker-11.cluster-113212:36221 with 29.2 GB RAM, BlockManagerId(1, emr-worker-11.cluster-113212, 36221, None)
+22/06/23 22:08:40 INFO [dispatcher-event-loop-2] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.246:57706) with ID 2
+22/06/23 22:08:40 INFO [dispatcher-event-loop-3] BlockManagerMasterEndpoint: Registering block manager emr-worker-10.cluster-113212:39376 with 29.2 GB RAM, BlockManagerId(2, emr-worker-10.cluster-113212, 39376, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.239:56788) with ID 3
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] BlockManagerMasterEndpoint: Registering block manager emr-worker-3.cluster-113212:44850 with 29.2 GB RAM, BlockManagerId(3, emr-worker-3.cluster-113212, 44850, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-3] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.243:55036) with ID 4
+22/06/23 22:08:41 INFO [dispatcher-event-loop-2] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.238:41338) with ID 6
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.240:44614) with ID 8
+22/06/23 22:08:41 INFO [dispatcher-event-loop-3] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.244:53618) with ID 7
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] BlockManagerMasterEndpoint: Registering block manager emr-worker-7.cluster-113212:39899 with 29.2 GB RAM, BlockManagerId(4, emr-worker-7.cluster-113212, 39899, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] BlockManagerMasterEndpoint: Registering block manager emr-worker-4.cluster-113212:37680 with 29.2 GB RAM, BlockManagerId(8, emr-worker-4.cluster-113212, 37680, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-1] BlockManagerMasterEndpoint: Registering block manager emr-worker-2.cluster-113212:36275 with 29.2 GB RAM, BlockManagerId(6, emr-worker-2.cluster-113212, 36275, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-1] BlockManagerMasterEndpoint: Registering block manager emr-worker-8.cluster-113212:35421 with 29.2 GB RAM, BlockManagerId(7, emr-worker-8.cluster-113212, 35421, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-2] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.248:51030) with ID 5
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] BlockManagerMasterEndpoint: Registering block manager emr-worker-12.cluster-113212:33752 with 29.2 GB RAM, BlockManagerId(5, emr-worker-12.cluster-113212, 33752, None)
+22/06/23 22:08:41 INFO [dispatcher-event-loop-0] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.237:50428) with ID 9
+22/06/23 22:08:42 INFO [dispatcher-event-loop-0] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.241:49366) with ID 11
+22/06/23 22:08:42 INFO [dispatcher-event-loop-2] BlockManagerMasterEndpoint: Registering block manager emr-worker-1.cluster-113212:39262 with 29.2 GB RAM, BlockManagerId(9, emr-worker-1.cluster-113212, 39262, None)
+22/06/23 22:08:42 INFO [Thread-6] YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+22/06/23 22:08:42 INFO [dispatcher-event-loop-0] YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.102.208.245:37598) with ID 10
+22/06/23 22:08:42 INFO [dispatcher-event-loop-2] BlockManagerMasterEndpoint: Registering block manager emr-worker-5.cluster-113212:40479 with 29.2 GB RAM, BlockManagerId(11, emr-worker-5.cluster-113212, 40479, None)
+22/06/23 22:08:42 INFO [Thread-6] SharedState: loading hive config file: file:/etc/ecm/spark-conf-2.4.5-hadoop2.8-1.0.0/hive-site.xml
+22/06/23 22:08:42 INFO [dispatcher-event-loop-0] BlockManagerMasterEndpoint: Registering block manager emr-worker-9.cluster-113212:43528 with 29.2 GB RAM, BlockManagerId(10, emr-worker-9.cluster-113212, 43528, None)
+22/06/23 22:08:42 INFO [Thread-6] SharedState: spark.sql.warehouse.dir is not set, but hive.metastore.warehouse.dir is set. Setting spark.sql.warehouse.dir to the value of hive.metastore.warehouse.dir ('/user/hive/warehouse').
+22/06/23 22:08:42 INFO [Thread-6] SharedState: Warehouse path is '/user/hive/warehouse'.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /SQL.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /SQL/json.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /SQL/execution.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /SQL/execution/json.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /static/sql.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /streamingsql.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /streamingsql/json.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /streamingsql/statistics.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /streamingsql/statistics/json.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /static/sql.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /streamingsql/query/kill.
+22/06/23 22:08:42 INFO [Thread-6] JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /streamingsql/query/restart.
+22/06/23 22:08:42 INFO [Thread-6] StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+('\xe4\xbc\xa0\xe5\x85\xa5\xe5\x8f\x82\xe6\x95\xb0 args', Namespace(sample_date='20220616'))
+('\xe6\xa0\xb7\xe6\x9c\xac\xe6\x9e\x84\xe9\x80\xa0\xe6\x97\xa5\xe6\x9c\x9f sample_date_date', datetime.datetime(2022, 6, 16, 0, 0))
+('\xe6\xa0\xb7\xe6\x9c\xac\xe6\x9e\x84\xe9\x80\xa0\xe5\x8f\x82\xe8\x80\x83\xe6\x97\xa5\xe6\x9c\x9f sample_date_after', '20220618')
+sample_date_middle 20220617 
+('\xe5\xbd\x93\xe5\x89\x8d\xe6\x97\xa5\xe6\x9c\x9f now_date', '20220623')
+('\xe8\xb4\x9f\xe6\xa0\xb7\xe6\x9c\xac\xe7\xad\x9b\xe9\x80\x89\xe5\x8f\x82\xe8\x80\x83\xe6\x97\xa5\xe6\x9c\x9f neg_sample_lastdate', '20220613')
+pos_data_table_ini 用户 在20220617进行Social app安装的数据分析
++------------------------------------------------------------+-------------+
+|bundle                                                      |device_id_cnt|
++------------------------------------------------------------+-------------+
+|in.mohalla.sharechat                                        |223597       |
+|in.mohalla.video                                            |126004       |
+|com.next.innovation.takatak                                 |41035        |
+|com.vivashow.share.video.chat                               |18502        |
+|com.cardfeed.video_public                                   |14525        |
+|video.like                                                  |10576        |
+|com.zhiliaoapp.musically                                    |7280         |
+|instagram.video.downloader.story.saver                      |7069         |
+|com.facebook.katana                                         |6668         |
+|com.eterno.shortvideos                                      |6557         |
+|com.lazygeniouz.saveit                                      |5410         |
+|app.buzz.share                                              |4273         |
+|video.like.lite                                             |4255         |
+|com.yy.hiyo                                                 |4144         |
+|sun.way2sms.hyd.com                                         |3878         |
+|com.instagram.android                                       |3762         |
+|get.lokal.localnews                                         |3612         |
+|com.roposo.android                                          |3131         |
+|com.blockchainvault                                         |2946         |
+|in.mohalla.video.lite                                       |2417         |
+|com.bela.live                                               |2137         |
+|com.mi.global.bbs                                           |1775         |
+|com.facebook.lite                                           |1707         |
+|com.facechat.live                                           |1577         |
+|com.blued.international                                     |1495         |
+|com.stackwares.android.storysaver.facebook                  |1368         |
+|photo.video.instasaveapp                                    |1288         |
+|com.grindrapp.android                                       |1277         |
+|sg.bigo.live                                                |1144         |
+|io.chingari.app                                             |1097         |
+|com.mosin.lee.gbversion.latest                              |1053         |
+|com.magic.whatsapp.status.saver.download                    |992          |
+|com.exutech.chacha                                          |968          |
+|com.kkmversion.thelightv                                    |940          |
+|messenger.social.chat.apps                                  |921          |
+|com.dianyun.chikii                                          |874          |
+|com.thinkmobile.accountmaster                               |846          |
+|com.ss.android.ugc.boom                                     |839          |
+|com.scorp.who                                               |835          |
+|com.realmecomm.app                                          |774          |
+|messenger.video.call.chat.free                              |752          |
+|com.cricket_indiastream.sports_live_stream_channels_ie      |696          |
+|com.belalite.live                                           |691          |
+|com.bunny                                                   |689          |
+|com.blued.international.qy                                  |643          |
+|com.kivi.live                                               |635          |
+|me.dingtone.app.im                                          |625          |
+|com.meeta.live                                              |619          |
+|com.bunny.lite                                              |617          |
+|com.helloplay                                               |609          |
+|com.zhiliaoapp.musically.go                                 |600          |
+|com.halo.pro                                                |580          |
+|com.twitter.android                                         |576          |
+|com.status.downloader.video.image.saver                     |567          |
+|com.gagalite.live                                           |560          |
+|gbstorysaver.gbtoolkit.gbwhatdownload.latestgb              |545          |
+|messenger.chat.social.messenger                             |508          |
+|com.facechatlite.live                                       |475          |
+|com.rasilo.gbapk.latestversion.gbdownload                   |473          |
+|cn.urhoney.u                                                |470          |
+|xdt.statussaver.downloadstatus.savestatus                   |466          |
+|playit.videoplayer.musicplayer                              |450          |
+|nikhil.nixify.satbarautaramaharashtra                       |448          |
+|videomaker.slideshow.editor.photo.editor                    |431          |
+|com.taggedapp                                               |427          |
+|com.halo.lite                                               |426          |
+|com.mgbrothers.vidstatus                                    |415          |
+|statussaver.deleted.messages.savevidieos                    |414          |
+|com.yumy.live                                               |403          |
+|com.freetalk.freetalk                                       |392          |
+|com.hidespps.apphider                                       |381          |
+|com.khushwant.sikhworld                                     |377          |
+|com.myyearbook.m                                            |372          |
+|com.twinkle.live                                            |358          |
+|com.skout.android                                           |356          |
+|com.whazappstatus.whasappstatus                             |353          |
+|com.uc.vmlite                                               |349          |
+|com.promo.ema.followersfinder                               |344          |
+|app.kindda.android                                          |329          |
+|com.bunny.pro                                               |324          |
+|com.kuka.live                                               |315          |
+|com.download.whatstatus                                     |298          |
+|com.laki.live                                               |295          |
+|com.edit.clip.status.video                                  |289          |
+|com.brownhatlabs.whatsapp_status_downloader                 |284          |
+|com.livevideocall.livetalk.privatevideochat.livu            |281          |
+|com.hiyo.live                                               |274          |
+|netplace.hashtags.likes                                     |270          |
+|com.piko.live                                               |264          |
+|com.peach.live                                              |260          |
+|in.golbol.share                                             |260          |
+|com.brownhatlabs.reels.downloader                           |260          |
+|com.oasis.world                                             |256          |
+|instagram.status.hd.images.video.downloader                 |253          |
+|com.future.lovevideocall.livevideochat.livefreetalkvideochat|246          |
+|com.zekichat.live                                           |245          |
+|com.hellow.chat                                             |243          |
+|short.video.app                                             |238          |
+|com.cutie.weiz                                              |237          |
+|statussaver.statusdownloader.savestatus.downloadstatus      |236          |
++------------------------------------------------------------+-------------+
+only showing top 100 rows
+
+正样本分析
+针对正样本的target_app_label进行分析
++----------------+-------------+
+|target_app_label|device_id_cnt|
++----------------+-------------+
+|3               |449843       |
+|2               |258303       |
+|1               |80531        |
++----------------+-------------+
+
+针对pos_data_table的bundle_social_set进行分析
++------------------------------------------------------------+-------------+
+|bundle_social                                               |device_id_cnt|
++------------------------------------------------------------+-------------+
+|N                                                           |671738       |
+|com.vivashow.share.video.chat                               |18371        |
+|com.cardfeed.video_public                                   |14159        |
+|video.like                                                  |10587        |
+|com.zhiliaoapp.musically                                    |7287         |
+|instagram.video.downloader.story.saver                      |6859         |
+|com.facebook.katana                                         |6680         |
+|com.eterno.shortvideos                                      |6064         |
+|com.lazygeniouz.saveit                                      |5326         |
+|app.buzz.share                                              |4279         |
+|video.like.lite                                             |4259         |
+|com.yy.hiyo                                                 |4152         |
+|sun.way2sms.hyd.com                                         |3797         |
+|com.instagram.android                                       |3771         |
+|get.lokal.localnews                                         |3568         |
+|com.roposo.android                                          |3135         |
+|com.blockchainvault                                         |2929         |
+|in.mohalla.video.lite                                       |2421         |
+|com.bela.live                                               |2121         |
+|com.mi.global.bbs                                           |1779         |
+|com.facebook.lite                                           |1708         |
+|com.facechat.live                                           |1537         |
+|com.blued.international                                     |1487         |
+|com.stackwares.android.storysaver.facebook                  |1363         |
+|photo.video.instasaveapp                                    |1283         |
+|com.grindrapp.android                                       |1269         |
+|sg.bigo.live                                                |1146         |
+|io.chingari.app                                             |1080         |
+|com.mosin.lee.gbversion.latest                              |1031         |
+|com.magic.whatsapp.status.saver.download                    |963          |
+|com.exutech.chacha                                          |945          |
+|com.kkmversion.thelightv                                    |928          |
+|messenger.social.chat.apps                                  |923          |
+|com.dianyun.chikii                                          |846          |
+|com.ss.android.ugc.boom                                     |840          |
+|com.thinkmobile.accountmaster                               |837          |
+|com.scorp.who                                               |836          |
+|com.realmecomm.app                                          |777          |
+|messenger.video.call.chat.free                              |751          |
+|com.cricket_indiastream.sports_live_stream_channels_ie      |697          |
+|com.belalite.live                                           |688          |
+|com.bunny                                                   |682          |
+|com.blued.international.qy                                  |641          |
+|com.kivi.live                                               |637          |
+|me.dingtone.app.im                                          |619          |
+|com.meeta.live                                              |618          |
+|com.bunny.lite                                              |617          |
+|com.helloplay                                               |609          |
+|com.zhiliaoapp.musically.go                                 |600          |
+|com.twitter.android                                         |578          |
+|com.status.downloader.video.image.saver                     |567          |
+|com.halo.pro                                                |565          |
+|com.gagalite.live                                           |546          |
+|gbstorysaver.gbtoolkit.gbwhatdownload.latestgb              |546          |
+|messenger.chat.social.messenger                             |506          |
+|com.facechatlite.live                                       |479          |
+|com.rasilo.gbapk.latestversion.gbdownload                   |469          |
+|cn.urhoney.u                                                |463          |
+|xdt.statussaver.downloadstatus.savestatus                   |462          |
+|playit.videoplayer.musicplayer                              |450          |
+|nikhil.nixify.satbarautaramaharashtra                       |447          |
+|com.taggedapp                                               |431          |
+|com.halo.lite                                               |424          |
+|statussaver.deleted.messages.savevidieos                    |413          |
+|com.yumy.live                                               |405          |
+|videomaker.slideshow.editor.photo.editor                    |399          |
+|com.freetalk.freetalk                                       |393          |
+|com.hidespps.apphider                                       |377          |
+|com.khushwant.sikhworld                                     |374          |
+|com.myyearbook.m                                            |373          |
+|com.twinkle.live                                            |357          |
+|com.skout.android                                           |355          |
+|com.uc.vmlite                                               |349          |
+|com.mgbrothers.vidstatus                                    |346          |
+|com.whazappstatus.whasappstatus                             |344          |
+|com.promo.ema.followersfinder                               |342          |
+|app.kindda.android                                          |332          |
+|com.kuka.live                                               |314          |
+|com.bunny.pro                                               |298          |
+|com.download.whatstatus                                     |293          |
+|com.edit.clip.status.video                                  |289          |
+|com.laki.live                                               |286          |
+|com.livevideocall.livetalk.privatevideochat.livu            |280          |
+|com.brownhatlabs.whatsapp_status_downloader                 |279          |
+|com.hiyo.live                                               |276          |
+|netplace.hashtags.likes                                     |266          |
+|com.piko.live                                               |263          |
+|com.peach.live                                              |261          |
+|in.golbol.share                                             |260          |
+|com.brownhatlabs.reels.downloader                           |258          |
+|com.oasis.world                                             |257          |
+|instagram.status.hd.images.video.downloader                 |252          |
+|com.hellow.chat                                             |244          |
+|com.future.lovevideocall.livevideochat.livefreetalkvideochat|243          |
+|short.video.app                                             |238          |
+|statussaver.statusdownloader.savestatus.downloadstatus      |237          |
+|com.cutie.weiz                                              |235          |
+|com.web_view_mohammed.ad.webview_app                        |234          |
+|com.zekichat.live                                           |232          |
+|com.tweetcreator.fktweeteditor                              |231          |
++------------------------------------------------------------+-------------+
+only showing top 100 rows
+
+针对pos_data_table的bundle_social_set_size进行分析
++----------------------+-------------+
+|bundle_social_set_size|device_id_cnt|
++----------------------+-------------+
+|0                     |671738       |
+|1                     |84194        |
+|2                     |17711        |
+|3                     |6362         |
+|4                     |3176         |
+|5                     |2043         |
+|6                     |1318         |
+|7                     |779          |
+|8                     |514          |
+|9                     |296          |
+|10                    |144          |
+|11                    |90           |
+|12                    |62           |
+|13                    |52           |
+|14                    |44           |
+|15                    |27           |
+|16                    |19           |
+|17                    |19           |
+|18                    |17           |
+|19                    |13           |
+|22                    |9            |
+|20                    |8            |
+|21                    |8            |
+|23                    |5            |
+|25                    |5            |
+|31                    |3            |
+|24                    |3            |
+|35                    |2            |
+|29                    |2            |
+|26                    |2            |
+|27                    |2            |
+|32                    |2            |
+|40                    |1            |
+|54                    |1            |
+|33                    |1            |
+|51                    |1            |
+|28                    |1            |
+|50                    |1            |
+|30                    |1            |
+|45                    |1            |
++----------------------+-------------+
+
+针对pos_data_table的activeday_label_xx_cnt进行分析
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+|avg_activeday_label_1_cnt|avg_activeday_label_2_cnt|avg_activeday_label_3_cnt|avg_activeday_label_4_cnt|avg_activeday_label_5_cnt|avg_activeday_label_6_cnt|avg_activeday_label_7_cnt|avg_activeday_label_8_cnt|avg_activeday_label_9_cnt|avg_activeday_label_10_cnt|avg_activeday_label_11_cnt|avg_activeday_label_12_cnt|avg_activeday_label_13_cnt|avg_activeday_label_14_cnt|avg_activeday_label_15_cnt|avg_activeday_label_16_cnt|avg_activeday_label_17_cnt|avg_activeday_label_18_cnt|avg_activeday_label_19_cnt|avg_activeday_label_20_cnt|avg_activeday_label_21_cnt|avg_activeday_label_22_cnt|avg_activeday_label_23_cnt|avg_activeday_label_24_cnt|avg_activeday_label_25_cnt|avg_activeday_label_26_cnt|avg_activeday_label_27_cnt|avg_activeday_label_28_cnt|avg_activeday_label_29_cnt|avg_activeday_label_30_cnt|
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+|1.3896132383726165       |0.546288277710647        |0.3933917180290537       |0.31796540282016594      |0.2862033506746108       |0.2402846792793501       |0.21427403106721762      |0.1976233616550248       |0.1817157087121851       |0.16851638883852324       |0.15123808606057992       |0.28333272049267316       |0.2540089288770942        |0.22477769733363595       |0.222835203765293         |0.20244028924388566       |0.42004267906887105       |0.37528164254821683       |0.3231677860518311        |0.3172325299203603        |0.5754434324824992        |0.4652360852414867        |0.42657767374983674       |0.3628545019063571        |0.34743500824799          |0.26912665134142366       |7.459900567659511         |0.18578708393930596       |0.04851922903799654       |0.0                       |
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+
+针对pos_data_table的activeday_label_xx_01进行分析
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|sum_activeday_label_1_01|sum_activeday_label_2_01|sum_activeday_label_3_01|sum_activeday_label_4_01|sum_activeday_label_5_01|sum_activeday_label_6_01|sum_activeday_label_7_01|sum_activeday_label_8_01|sum_activeday_label_9_01|sum_activeday_label_10_01|sum_activeday_label_11_01|sum_activeday_label_12_01|sum_activeday_label_13_01|sum_activeday_label_14_01|sum_activeday_label_15_01|sum_activeday_label_16_01|sum_activeday_label_17_01|sum_activeday_label_18_01|sum_activeday_label_19_01|sum_activeday_label_20_01|sum_activeday_label_21_01|sum_activeday_label_22_01|sum_activeday_label_23_01|sum_activeday_label_24_01|sum_activeday_label_25_01|sum_activeday_label_26_01|sum_activeday_label_27_01|sum_activeday_label_28_01|sum_activeday_label_29_01|sum_activeday_label_30_01|
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|527470                  |288539                  |222701                  |184950                  |165353                  |143780                  |130026                  |119934                  |109834                  |102006                   |92639                    |152940                   |140012                   |124342                   |121084                   |111458                   |186849                   |169077                   |146593                   |141930                   |203959                   |171085                   |157916                   |138191                   |130901                   |108743                   |269998                   |9243                     |2421                     |0                        |
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+
+针对pos_data_table的bundles_size_label进行分析
++------------------+-------------+
+|bundles_size_label|device_id_cnt|
++------------------+-------------+
+|1                 |71949        |
+|2                 |68800        |
+|3                 |68741        |
+|4                 |58171        |
+|50                |54370        |
+|5                 |47795        |
+|6                 |40479        |
+|7                 |34450        |
+|8                 |29614        |
+|9                 |25804        |
+|10                |22416        |
+|11                |20375        |
+|12                |18522        |
+|13                |16955        |
+|14                |15422        |
+|15                |14222        |
+|16                |13136        |
+|17                |12282        |
+|18                |11097        |
+|19                |10441        |
+|20                |9712         |
+|21                |9145         |
+|22                |8579         |
+|23                |7897         |
+|24                |7360         |
+|25                |6941         |
+|26                |6429         |
+|27                |6115         |
+|28                |5661         |
+|29                |5331         |
+|30                |4968         |
+|31                |4707         |
+|32                |4308         |
+|33                |4084         |
+|34                |3876         |
+|35                |3698         |
+|36                |3407         |
+|37                |3232         |
+|38                |3195         |
+|39                |2846         |
+|40                |2776         |
+|41                |2601         |
+|42                |2419         |
+|43                |2382         |
+|44                |2202         |
+|45                |2109         |
+|46                |2050         |
+|48                |1900         |
+|47                |1878         |
+|49                |1828         |
++------------------+-------------+
+
+针对pos_data_table的lastdaygap_label进行分析
++----------------+-------------+
+|lastdaygap_label|device_id_cnt|
++----------------+-------------+
+|0               |527470       |
+|1               |84635        |
+|2               |43150        |
+|3               |26395        |
+|4               |18893        |
+|5               |13779        |
+|6               |10482        |
+|7               |8450         |
+|50              |8138         |
+|8               |6552         |
+|9               |5218         |
+|10              |4043         |
+|11              |3538         |
+|12              |3144         |
+|13              |2609         |
+|14              |2521         |
+|15              |2121         |
+|16              |1749         |
+|17              |1504         |
+|18              |1131         |
+|19              |1036         |
+|20              |943          |
+|21              |878          |
+|22              |770          |
+|23              |727          |
+|24              |666          |
+|25              |664          |
+|26              |649          |
+|27              |616          |
+|28              |560          |
+|30              |449          |
+|29              |445          |
+|31              |392          |
+|32              |377          |
+|33              |335          |
+|35              |311          |
+|34              |311          |
+|36              |280          |
+|37              |265          |
+|39              |258          |
+|38              |238          |
+|42              |235          |
+|40              |234          |
+|41              |225          |
+|43              |211          |
+|44              |205          |
+|46              |204          |
+|45              |202          |
+|49              |167          |
+|48              |165          |
+|47              |137          |
++----------------+-------------+
+
+针对pos_data_table的osversion进行分析
++-----------------------+-------------+
+|osversion              |device_id_cnt|
++-----------------------+-------------+
+|unknow                 |151814       |
+|9.0                    |145767       |
+|10.0                   |119807       |
+|11.0.0                 |64485        |
+|11.0                   |50981        |
+|8.1.1                  |46755        |
+|11                     |40874        |
+|8.0                    |16433        |
+|5.1.1                  |15017        |
+|12                     |13399        |
+|6.0.1                  |13267        |
+|8.1.0                  |12616        |
+|7.0                    |12310        |
+|12.0.0                 |11101        |
+|12.0                   |9907         |
+|7.1.2                  |9269         |
+|8.1                    |8853         |
+|7.1.1                  |7933         |
+|6.0                    |7897         |
+|Unknown                |7772         |
+|30                     |6776         |
+|null                   |5089         |
+|4.0                    |2937         |
+|4.4.2                  |1849         |
+|5.1                    |1341         |
+|4.4.4                  |1333         |
+|5.0.2                  |608          |
+|30.0                   |475          |
+|29.0                   |359          |
+|31                     |342          |
+|5.0                    |164          |
+|5.x                    |145          |
+|2.3                    |135          |
+|5.0.1                  |127          |
+|7.1                    |84           |
+|31.0                   |74           |
+|29(10)                 |63           |
+|4.2.2                  |55           |
+|30(11)                 |52           |
+|9.1                    |43           |
+|10.0.0                 |36           |
+|4.4                    |27           |
+|9.0.0                  |26           |
+|other                  |26           |
+|os_version_android_28  |23           |
+|Linux                  |22           |
+|os_version_android_29  |22           |
+|3.0                    |21           |
+|4.0.3                  |14           |
+|os_version_android_27  |11           |
+|4.2                    |10           |
+|4.3                    |9            |
+|OS                     |8            |
+|2.3.7                  |7            |
+|11.0.2201117           |7            |
+|9                      |7            |
+|11.0.21061119          |7            |
+|8.0.0                  |6            |
+|4.1                    |6            |
+|os_version_android_25  |6            |
+|10.0.211033            |5            |
+|4.1.1                  |5            |
+|os_version_android_26  |4            |
+|Android 8.1 Oreo       |4            |
+|11.0.21091116          |3            |
+|11.0.220333            |3            |
+|7.0.0                  |3            |
+|Android 10             |3            |
+|9.3.6                  |3            |
+|Android 9.0 Pie        |3            |
+|Android 12             |2            |
+|4.x                    |2            |
+|2.2                    |2            |
+|Android 11             |2            |
+|9.3.5                  |2            |
+|11.0.2201116           |2            |
+|4.1.2                  |2            |
+|os_version_android_24  |1            |
+|2.3.5                  |1            |
+|null                   |1            |
+|9.3.2                  |1            |
+|7.1.2 / API-25         |1            |
+|31(12)                 |1            |
+|Android 6.0 Marshmallow|1            |
+|P                      |1            |
+|6.0.0                  |1            |
+|DownloadManager        |1            |
+|27.0                   |1            |
+|6.1                    |1            |
+|unknown                |1            |
+|O_MR1                  |1            |
+|29                     |1            |
+|os_version_android_23  |1            |
+|11.0.2109119           |1            |
+|0.0.0                  |1            |
++-----------------------+-------------+
+
+负样本分析
+针对neg_data_table的bundle_social_set进行分析
++------------------------------------------------------+-------------+
+|bundle_social                                         |device_id_cnt|
++------------------------------------------------------+-------------+
+|N                                                     |196015977    |
+|video.like                                            |7409859      |
+|com.facebook.katana                                   |7283983      |
+|com.zhiliaoapp.musically                              |6835011      |
+|com.cardfeed.video_public                             |5009573      |
+|com.instagram.android                                 |4881692      |
+|app.buzz.share                                        |3933124      |
+|instagram.video.downloader.story.saver                |3744834      |
+|com.yy.hiyo                                           |3675096      |
+|com.blockchainvault                                   |3163213      |
+|com.vivashow.share.video.chat                         |3159128      |
+|com.lazygeniouz.saveit                                |3014736      |
+|video.like.lite                                       |2728686      |
+|com.eterno.shortvideos                                |2267819      |
+|com.facebook.lite                                     |1864611      |
+|sun.way2sms.hyd.com                                   |1714883      |
+|com.mi.global.bbs                                     |1707080      |
+|com.roposo.android                                    |1591002      |
+|get.lokal.localnews                                   |1363027      |
+|photo.video.instasaveapp                              |1106107      |
+|com.blued.international                               |1074031      |
+|com.stackwares.android.storysaver.facebook            |1061821      |
+|com.bela.live                                         |1055127      |
+|sg.bigo.live                                          |1001267      |
+|com.realmecomm.app                                    |970006       |
+|com.grindrapp.android                                 |880892       |
+|com.twitter.android                                   |791624       |
+|com.scorp.who                                         |785884       |
+|in.mohalla.video.lite                                 |731422       |
+|com.ss.android.ugc.boom                               |703599       |
+|messenger.social.chat.apps                            |673852       |
+|com.exutech.chacha                                    |659516       |
+|com.magic.whatsapp.status.saver.download              |546798       |
+|com.facechat.live                                     |545351       |
+|com.zhiliaoapp.musically.go                           |523864       |
+|com.thinkmobile.accountmaster                         |501628       |
+|com.helloplay                                         |451843       |
+|com.blued.international.qy                            |437119       |
+|me.dingtone.app.im                                    |429214       |
+|messenger.video.call.chat.free                        |415962       |
+|com.status.downloader.video.image.saver               |412593       |
+|com.taggedapp                                         |397086       |
+|com.belalite.live                                     |395219       |
+|messenger.chat.social.messenger                       |390020       |
+|com.dianyun.chikii                                    |388980       |
+|com.cricket_indiastream.sports_live_stream_channels_ie|379545       |
+|io.chingari.app                                       |372608       |
+|com.myyearbook.m                                      |350535       |
+|nikhil.nixify.satbarautaramaharashtra                 |344124       |
+|statussaver.deleted.messages.savevidieos              |342038       |
+|com.skout.android                                     |333376       |
+|com.bunny                                             |327800       |
+|com.uc.vmlite                                         |280387       |
+|com.kivi.live                                         |278385       |
+|instagram.status.hd.images.video.downloader           |265928       |
+|com.bunny.lite                                        |253581       |
+|com.mosin.lee.gbversion.latest                        |248239       |
+|netplace.hashtags.likes                               |246150       |
+|com.meeta.live                                        |243762       |
+|com.hidespps.apphider                                 |243461       |
+|com.yumy.live                                         |242731       |
+|com.brownhatlabs.reels.downloader                     |241688       |
+|com.facechatlite.live                                 |233389       |
+|com.khushwant.sikhworld                               |229649       |
+|in.yourquote.app                                      |224603       |
+|com.hike.chat.stickers                                |220672       |
+|com.promo.ema.followersfinder                         |217656       |
+|com.streamtech.chat                                   |215770       |
+|com.whazappstatus.whasappstatus                       |211917       |
+|com.twinkle.live                                      |208151       |
+|cn.urhoney.u                                          |205609       |
+|com.tumblr                                            |203776       |
+|playit.videoplayer.musicplayer                        |202624       |
+|com.gagalite.live                                     |200573       |
+|com.gogii.textplus                                    |196229       |
+|xdt.statussaver.downloadstatus.savestatus             |195265       |
+|com.edit.clip.status.video                            |192771       |
+|statussaver.statusdownloader.savestatus.downloadstatus|188875       |
+|app.kindda.android                                    |188185       |
+|com.hellow.chat                                       |187610       |
+|com.kuka.live                                         |186293       |
+|com.halo.pro                                          |183372       |
+|com.freetalk.freetalk                                 |181787       |
+|com.tweetcreator.fktweeteditor                        |177519       |
+|com.oasis.world                                       |175496       |
+|com.rasilo.gbapk.latestversion.gbdownload             |166601       |
+|com.halo.lite                                         |157431       |
+|com.kkmversion.thelightv                              |156838       |
+|com.statussaver.wapp                                  |153045       |
+|com.ss.android.ugc.boomlite                           |147926       |
+|in.golbol.share                                       |146570       |
+|com.randomvideocall.hdvideocalls.livetalk             |142927       |
+|spiritualstudio.hanumanchalisa                        |137898       |
+|com.hiyo.live                                         |136896       |
+|com.asiainno.uplive.aiglamour                         |135660       |
+|com.parallel.space.lite                               |135411       |
+|com.matchtech.solive                                  |133950       |
+|com.polestar.super.clone                              |130365       |
+|com.instagram_downloader.android                      |127078       |
+|com.beakerapps.qeek                                   |122807       |
++------------------------------------------------------+-------------+
+only showing top 100 rows
+
+针对neg_data_table的bundle_social_set_size进行分析
++----------------------+-------------+
+|bundle_social_set_size|device_id_cnt|
++----------------------+-------------+
+|0                     |196015977    |
+|1                     |37921902     |
+|2                     |10665629     |
+|3                     |4689986      |
+|4                     |2831467      |
+|5                     |1836647      |
+|6                     |1145909      |
+|7                     |683366       |
+|8                     |400658       |
+|9                     |231667       |
+|10                    |136477       |
+|11                    |82580        |
+|12                    |52844        |
+|13                    |35011        |
+|14                    |24258        |
+|15                    |17589        |
+|16                    |13281        |
+|17                    |10041        |
+|18                    |7966         |
+|19                    |6222         |
+|20                    |5062         |
+|21                    |4104         |
+|22                    |3243         |
+|23                    |2717         |
+|24                    |2212         |
+|25                    |1916         |
+|26                    |1605         |
+|27                    |1369         |
+|28                    |1089         |
+|29                    |994          |
+|30                    |862          |
+|31                    |680          |
+|32                    |649          |
+|33                    |544          |
+|34                    |486          |
+|35                    |419          |
+|36                    |329          |
+|37                    |306          |
+|38                    |265          |
+|39                    |228          |
+|40                    |185          |
+|41                    |183          |
+|42                    |174          |
+|43                    |138          |
+|44                    |129          |
+|45                    |118          |
+|46                    |86           |
+|47                    |79           |
+|49                    |70           |
+|48                    |65           |
+|50                    |56           |
+|51                    |52           |
+|52                    |50           |
+|53                    |48           |
+|55                    |38           |
+|56                    |35           |
+|54                    |29           |
+|58                    |28           |
+|57                    |26           |
+|59                    |25           |
+|61                    |23           |
+|60                    |23           |
+|63                    |20           |
+|62                    |19           |
+|71                    |14           |
+|66                    |13           |
+|69                    |12           |
+|68                    |11           |
+|64                    |10           |
+|74                    |9            |
+|67                    |8            |
+|72                    |8            |
+|70                    |7            |
+|65                    |7            |
+|88                    |5            |
+|83                    |4            |
+|73                    |4            |
+|82                    |4            |
+|78                    |3            |
+|76                    |3            |
+|81                    |3            |
+|80                    |2            |
+|85                    |2            |
+|91                    |2            |
+|87                    |2            |
+|79                    |2            |
+|86                    |2            |
+|75                    |2            |
+|92                    |2            |
+|89                    |2            |
+|77                    |2            |
+|129                   |1            |
+|93                    |1            |
+|90                    |1            |
+|103                   |1            |
+|107                   |1            |
+|126                   |1            |
++----------------------+-------------+
+
+针对neg_data_table的activeday_label_xx_cnt进行分析
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+|avg_activeday_label_1_cnt|avg_activeday_label_2_cnt|avg_activeday_label_3_cnt|avg_activeday_label_4_cnt|avg_activeday_label_5_cnt|avg_activeday_label_6_cnt|avg_activeday_label_7_cnt|avg_activeday_label_8_cnt|avg_activeday_label_9_cnt|avg_activeday_label_10_cnt|avg_activeday_label_11_cnt|avg_activeday_label_12_cnt|avg_activeday_label_13_cnt|avg_activeday_label_14_cnt|avg_activeday_label_15_cnt|avg_activeday_label_16_cnt|avg_activeday_label_17_cnt|avg_activeday_label_18_cnt|avg_activeday_label_19_cnt|avg_activeday_label_20_cnt|avg_activeday_label_21_cnt|avg_activeday_label_22_cnt|avg_activeday_label_23_cnt|avg_activeday_label_24_cnt|avg_activeday_label_25_cnt|avg_activeday_label_26_cnt|avg_activeday_label_27_cnt|avg_activeday_label_28_cnt|avg_activeday_label_29_cnt|avg_activeday_label_30_cnt|
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+|1.21985621296674         |0.5473026895931632       |0.3947447933873769       |0.3248405120493385       |0.28153070665991703      |0.25010057802197994      |0.21035067979140323      |0.1828211874108313       |0.16818000202039862      |0.16248539569743556       |0.15295244861122045       |0.28452108505076884       |0.27199145994185975       |0.253335660900645         |0.23225033758901628       |0.23861528625678935       |0.5225669827044269        |0.46729203114559786       |0.4313223247279869        |0.417938830855142         |0.7980599672467423        |0.6751945019118215        |0.6429603759464545        |0.5521914998063039        |0.5478952287592942        |0.4630213518662636        |16.611348947953307        |0.21343987440979204       |0.06323529172430914       |6.828754195319252E-5      |
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+
+针对neg_data_table的activeday_label_xx_01进行分析
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|sum_activeday_label_1_01|sum_activeday_label_2_01|sum_activeday_label_3_01|sum_activeday_label_4_01|sum_activeday_label_5_01|sum_activeday_label_6_01|sum_activeday_label_7_01|sum_activeday_label_8_01|sum_activeday_label_9_01|sum_activeday_label_10_01|sum_activeday_label_11_01|sum_activeday_label_12_01|sum_activeday_label_13_01|sum_activeday_label_14_01|sum_activeday_label_15_01|sum_activeday_label_16_01|sum_activeday_label_17_01|sum_activeday_label_18_01|sum_activeday_label_19_01|sum_activeday_label_20_01|sum_activeday_label_21_01|sum_activeday_label_22_01|sum_activeday_label_23_01|sum_activeday_label_24_01|sum_activeday_label_25_01|sum_activeday_label_26_01|sum_activeday_label_27_01|sum_activeday_label_28_01|sum_activeday_label_29_01|sum_activeday_label_30_01|
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|166709954               |97411632                |75597400                |64180512                |56674860                |50661829                |41622643                |37181329                |34667947                |33581846                 |31448213                 |53101095                 |50659301                 |47986294                 |44083847                 |44636082                 |81097772                 |73902733                 |68501196                 |65948575                 |101199396                |89072725                 |85315232                 |75728611                 |73930048                 |65394488                 |180110656                |3282570                  |1015708                  |1304                     |
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+
+针对neg_data_table的bundles_size_label进行分析
++------------------+-------------+
+|bundles_size_label|device_id_cnt|
++------------------+-------------+
+|50                |35630542     |
+|4                 |9537699      |
+|3                 |9502565      |
+|5                 |9329390      |
+|6                 |9039188      |
+|7                 |8700561      |
+|1                 |8461616      |
+|8                 |8348821      |
+|2                 |8305540      |
+|9                 |8015942      |
+|10                |7699899      |
+|11                |7419738      |
+|12                |7162329      |
+|13                |6889883      |
+|14                |6626066      |
+|15                |6352836      |
+|16                |6078060      |
+|17                |5807006      |
+|18                |5542315      |
+|19                |5273012      |
+|20                |5021389      |
+|21                |4766035      |
+|22                |4524476      |
+|23                |4288891      |
+|24                |4062669      |
+|25                |3845638      |
+|26                |3643102      |
+|27                |3445413      |
+|28                |3255984      |
+|29                |3082958      |
+|30                |2917814      |
+|31                |2758720      |
+|32                |2614350      |
+|33                |2479793      |
+|34                |2346814      |
+|35                |2223231      |
+|36                |2111091      |
+|37                |2003518      |
+|38                |1905289      |
+|39                |1807293      |
+|40                |1721144      |
+|41                |1635874      |
+|42                |1559225      |
+|43                |1485258      |
+|44                |1419058      |
+|45                |1351143      |
+|46                |1292739      |
+|47                |1234417      |
+|48                |1182608      |
+|49                |1131464      |
++------------------+-------------+
+
+针对neg_data_table的lastdaygap_label进行分析
++----------------+-------------+
+|lastdaygap_label|device_id_cnt|
++----------------+-------------+
+|0               |166709954    |
+|1               |38296367     |
+|2               |20169022     |
+|3               |13753170     |
+|4               |10068208     |
+|5               |7756741      |
+|50              |23965        |
+|6               |5633         |
+|7               |3271         |
+|16              |2994         |
+|17              |2765         |
+|27              |2760         |
+|18              |2441         |
+|8               |2263         |
+|33              |2010         |
+|25              |1989         |
+|29              |1985         |
+|28              |1945         |
+|9               |1886         |
+|30              |1884         |
+|32              |1863         |
+|23              |1833         |
+|24              |1804         |
+|26              |1626         |
+|10              |1511         |
+|39              |1459         |
+|15              |1381         |
+|38              |1380         |
+|36              |1325         |
+|11              |1215         |
+|12              |1192         |
+|37              |987          |
+|13              |979          |
+|31              |975          |
+|14              |937          |
+|19              |840          |
+|35              |788          |
+|34              |757          |
+|46              |629          |
+|40              |593          |
+|20              |587          |
+|44              |560          |
+|45              |541          |
+|22              |521          |
+|48              |512          |
+|21              |477          |
+|49              |442          |
+|43              |409          |
+|47              |403          |
+|41              |324          |
+|42              |303          |
++----------------+-------------+
+
+针对neg_data_table的osversion进行分析
++-----------------------+-------------+
+|osversion              |device_id_cnt|
++-----------------------+-------------+
+|9.0                    |75104474     |
+|unknow                 |70529975     |
+|10.0                   |22840578     |
+|11.0.0                 |13821624     |
+|8.1.1                  |11453847     |
+|8.0                    |7240148      |
+|11.0                   |7166390      |
+|Unknown                |5639580      |
+|11                     |4909068      |
+|5.1.1                  |4338951      |
+|8.1                    |3826171      |
+|6.0.1                  |3697257      |
+|7.0                    |3396171      |
+|30                     |3199440      |
+|12.0.0                 |2435081      |
+|7.1.2                  |2363558      |
+|12                     |2212046      |
+|6.0                    |2091440      |
+|8.1.0                  |2046649      |
+|7.1.1                  |1918480      |
+|12.0                   |1446173      |
+|4.0                    |1131623      |
+|4.4.2                  |1072874      |
+|4.4.4                  |626053       |
+|null                   |409470       |
+|5.1                    |363464       |
+|5.0.2                  |246739       |
+|30.0                   |203446       |
+|29.0                   |149981       |
+|30(11)                 |102515       |
+|31                     |96677        |
+|5.x                    |93091        |
+|29(10)                 |75915        |
+|5.0.1                  |75698        |
+|2.3                    |73679        |
+|5.0                    |42885        |
+|Android 11             |33911        |
+|9.1                    |31606        |
+|31.0                   |27034        |
+|os_version_android_29  |21217        |
+|os_version_android_28  |20015        |
+|Linux                  |17505        |
+|Android 10             |16854        |
+|4.2.2                  |16643        |
+|os_version_android_27  |14892        |
+|Android 12             |13700        |
+|3.0                    |11373        |
+|4.4                    |11166        |
+|other                  |11161        |
+|7.1                    |10674        |
+|9.0.0                  |9303         |
+|31(12)                 |9179         |
+|10.0.0                 |8915         |
+|Android 9.0 Pie        |7844         |
+|8.0.0                  |6770         |
+|OS                     |6471         |
+|Android 8.1 Oreo       |5352         |
+|2.3.7                  |4920         |
+|4.0.3                  |4703         |
+|4.3                    |3798         |
+|4.1.2                  |3710         |
+|4.1                    |3701         |
+|9.3.5                  |3700         |
+|4.1.1                  |3349         |
+|11.0.2201117           |3008         |
+|4.x                    |2935         |
+|11.0.21061119          |2769         |
+|11.0.21091116          |2736         |
+|os_version_android_24  |2645         |
+|9.3.6                  |2568         |
+|os_version_android_25  |2550         |
+|6.1                    |2376         |
+|2.3.3                  |2257         |
+|os_version_android_23  |2077         |
+|unknown                |1727         |
+|4.2                    |1714         |
+|os_version_android_26  |1561         |
+|2.3.5                  |1376         |
+|11.0.2201116           |1208         |
+|4.0.4                  |1188         |
+|Android 7.1 Nougat     |1080         |
+|Android 6.0 Marshmallow|1040         |
+|Android 7.0 Nougat     |763          |
+|23                     |756          |
+|11.0.220333            |743          |
+|9                      |718          |
+|7.0.0                  |681          |
+|Android 8.0 Oreo       |658          |
+|9.3.2                  |617          |
+|null                   |613          |
+|10.0.211033            |610          |
+|Q                      |610          |
+|10                     |560          |
+|29                     |512          |
+|9.2                    |505          |
+|24                     |479          |
+|32.0                   |460          |
+|8.1Go                  |455          |
+|Android 5.1 lollipop   |453          |
+|O_MR1                  |447          |
++-----------------------+-------------+
+only showing top 100 rows
+
+负social样本分析
+针对neg_data_social_table的bundle_social_set进行分析
++-------------+-------------+
+|bundle_social|device_id_cnt|
++-------------+-------------+
++-------------+-------------+
+
+针对neg_data_social_table的bundle_social_set_size进行分析
++----------------------+-------------+
+|bundle_social_set_size|device_id_cnt|
++----------------------+-------------+
++----------------------+-------------+
+
+针对neg_data_social_table的activeday_label_xx_cnt进行分析
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+|avg_activeday_label_1_cnt|avg_activeday_label_2_cnt|avg_activeday_label_3_cnt|avg_activeday_label_4_cnt|avg_activeday_label_5_cnt|avg_activeday_label_6_cnt|avg_activeday_label_7_cnt|avg_activeday_label_8_cnt|avg_activeday_label_9_cnt|avg_activeday_label_10_cnt|avg_activeday_label_11_cnt|avg_activeday_label_12_cnt|avg_activeday_label_13_cnt|avg_activeday_label_14_cnt|avg_activeday_label_15_cnt|avg_activeday_label_16_cnt|avg_activeday_label_17_cnt|avg_activeday_label_18_cnt|avg_activeday_label_19_cnt|avg_activeday_label_20_cnt|avg_activeday_label_21_cnt|avg_activeday_label_22_cnt|avg_activeday_label_23_cnt|avg_activeday_label_24_cnt|avg_activeday_label_25_cnt|avg_activeday_label_26_cnt|avg_activeday_label_27_cnt|avg_activeday_label_28_cnt|avg_activeday_label_29_cnt|avg_activeday_label_30_cnt|
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+|null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |null                      |
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+
+针对neg_data_social_table的activeday_label_xx_01进行分析
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|sum_activeday_label_1_01|sum_activeday_label_2_01|sum_activeday_label_3_01|sum_activeday_label_4_01|sum_activeday_label_5_01|sum_activeday_label_6_01|sum_activeday_label_7_01|sum_activeday_label_8_01|sum_activeday_label_9_01|sum_activeday_label_10_01|sum_activeday_label_11_01|sum_activeday_label_12_01|sum_activeday_label_13_01|sum_activeday_label_14_01|sum_activeday_label_15_01|sum_activeday_label_16_01|sum_activeday_label_17_01|sum_activeday_label_18_01|sum_activeday_label_19_01|sum_activeday_label_20_01|sum_activeday_label_21_01|sum_activeday_label_22_01|sum_activeday_label_23_01|sum_activeday_label_24_01|sum_activeday_label_25_01|sum_activeday_label_26_01|sum_activeday_label_27_01|sum_activeday_label_28_01|sum_activeday_label_29_01|sum_activeday_label_30_01|
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|null                    |null                    |null                    |null                    |null                    |null                    |null                    |null                    |null                    |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |null                     |
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+
+针对neg_data_social_table的bundles_size_label进行分析
++------------------+-------------+
+|bundles_size_label|device_id_cnt|
++------------------+-------------+
++------------------+-------------+
+
+针对neg_data_social_table的lastdaygap_label进行分析
++----------------+-------------+
+|lastdaygap_label|device_id_cnt|
++----------------+-------------+
++----------------+-------------+
+
+针对neg_data_social_table的osversion进行分析
++---------+-------------+
+|osversion|device_id_cnt|
++---------+-------------+
++---------+-------------+
+
+针对neg_data_social_table，统计在第二天进行安装Social app的个数
++------------------------+-------------+
+|bundle_social_set_2_size|device_id_cnt|
++------------------------+-------------+
++------------------------+-------------+
+
+针对neg_data_social_table，统计在第二天进行安装Social app的种类 以及用户数
++-----------------------+-------------+
+|bundle_social_set_2_ele|device_id_cnt|
++-----------------------+-------------+
++-----------------------+-------------+
+
